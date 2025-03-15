@@ -1,0 +1,47 @@
+2025-03-15 05:20:47,502 - root - INFO - Starting Cover Letter Generator API server
+2025-03-15 05:20:54,131 - root - INFO - All required modules are installed
+2025-03-15 05:20:55,363 - root - INFO - SpaCy model loaded successfully
+2025-03-15 05:20:55,373 - root - ERROR - Unhandled exception: source code string cannot contain null bytes
+Traceback (most recent call last):
+  File "C:\Users\abhin\Downloads\My CL Generator\backend\run_server.py", line 74, in main
+    from app import app
+  File "C:\Users\abhin\Downloads\My CL Generator\backend\app.py", line 10, in <module>
+    from llm_cover_letter_generator import MLCoverLetterGenerator
+SyntaxError: source code string cannot contain null bytes
+2025-03-15 05:26:00,535 - root - INFO - Starting Cover Letter Generator API server
+2025-03-15 05:26:08,028 - root - INFO - All required modules are installed
+2025-03-15 05:26:09,150 - root - INFO - SpaCy model loaded successfully
+2025-03-15 05:26:09,155 - root - ERROR - Unhandled exception: source code string cannot contain null bytes
+Traceback (most recent call last):
+  File "C:\Users\abhin\Downloads\My CL Generator\backend\run_server.py", line 74, in main
+    from app import app
+  File "C:\Users\abhin\Downloads\My CL Generator\backend\app.py", line 10, in <module>
+    from llm_cover_letter_generator import MLCoverLetterGenerator
+SyntaxError: source code string cannot contain null bytes
+2025-03-15 05:27:38,597 - root - INFO - Starting Cover Letter Generator API server
+2025-03-15 05:27:44,045 - root - INFO - All required modules are installed
+2025-03-15 05:27:45,030 - root - INFO - SpaCy model loaded successfully
+2025-03-15 05:27:45,043 - root - INFO - Starting server on port 5000 (debug=False)
+2025-03-15 05:27:45,092 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.18.97:5000
+2025-03-15 05:27:45,093 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-15 05:41:07,136 - root - INFO - Starting Cover Letter Generator API server
+2025-03-15 05:41:14,084 - root - INFO - All required modules are installed
+2025-03-15 05:41:15,053 - root - INFO - SpaCy model loaded successfully
+2025-03-15 05:41:17,582 - root - INFO - Starting server on port 5000 (debug=False)
+2025-03-15 05:41:17,612 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.18.97:5000
+2025-03-15 05:41:17,613 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-15 05:52:17,063 - root - INFO - Starting Cover Letter Generator API server
+2025-03-15 05:52:20,912 - root - INFO - All required modules are installed
+2025-03-15 05:52:21,385 - root - INFO - SpaCy model loaded successfully
+2025-03-15 05:52:22,652 - root - INFO - Starting server on port 5000 (debug=False)
+2025-03-15 05:52:22,671 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.18.97:5000
+2025-03-15 05:52:22,672 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
