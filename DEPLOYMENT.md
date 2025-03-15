@@ -96,6 +96,35 @@ After deploying both frontend and backend, you need to update the CORS settings 
    heroku restart --app my-cl-generator-api
    ```
 
+## Alternative: Deploy the Backend to Render.com
+
+If you encounter issues with Heroku requiring payment verification, you can use Render.com as an alternative:
+
+1. **Create a Render.com account**:
+   - Go to [render.com](https://render.com/) and sign up for a free account
+
+2. **Deploy from GitHub**:
+   - In the Render dashboard, click "New" and select "Web Service"
+   - Connect your GitHub repository
+   - Select the repository containing your Cover Letter Generator
+   - Configure the service:
+     - Name: `my-cl-generator-api`
+     - Environment: `Python`
+     - Build Command: `pip install -r backend/requirements.txt && python -m spacy download en_core_web_sm`
+     - Start Command: `cd backend && python app.py`
+   - Add the following environment variables:
+     - `PORT`: `5000`
+     - `DEBUG`: `False`
+     - `ALLOWED_ORIGINS`: `https://my-cl-generator-macjacker.vercel.app,https://my-cl-generator.vercel.app`
+
+3. **Deploy the service**:
+   - Click "Create Web Service"
+   - Wait for the deployment to complete
+
+4. **Update the frontend**:
+   - After deployment, Render will provide a URL for your service (e.g., `https://my-cl-generator-api.onrender.com`)
+   - Update the `NEXT_PUBLIC_API_URL` in your Vercel deployment to point to this URL
+
 ## Troubleshooting
 
 ### MongoDB Connection Issues
