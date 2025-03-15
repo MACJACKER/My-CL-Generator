@@ -200,7 +200,8 @@ class MLCoverLetterGenerator:
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)
+# Update CORS to accept requests from Vercel deployment
+CORS(app, origins=["http://localhost:3000", "https://my-cl-generator.vercel.app", "https://my-cl-generator-macjacker.vercel.app", "*"])
 
 # Create an instance of the generator
 generator = MLCoverLetterGenerator(use_spacy=False)

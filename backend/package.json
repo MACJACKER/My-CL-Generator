@@ -1,0 +1,13 @@
+{
+  "name": "cl-generator-backend",
+  "version": "1.0.0",
+  "description": "Backend for ML-powered Cover Letter Generator",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py"
+  },
+  "engines": {
+    "node": "18.x",
+    "python": "3.9.x"
+  }
+} 

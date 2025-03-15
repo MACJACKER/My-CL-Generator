@@ -37,6 +37,10 @@ const nextConfig = {
       }
     ]
   },
+  env: {
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_USE_ML_BACKEND: process.env.NEXT_PUBLIC_USE_ML_BACKEND,
+  },
 }
 
 mergeConfig(nextConfig, userConfig)

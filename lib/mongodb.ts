@@ -1,14 +1,14 @@
 import { MongoClient } from "mongodb"
 
-const uri = process.env.MONGODB_URI!
+if (!process.env.MONGODB_URI) {
+  throw new Error("Please add your MongoDB URI to .env.local")
+}
+
+const uri = process.env.MONGODB_URI
 const options = {}
 
 let client
 let clientPromise: Promise<MongoClient>
-
-if (!process.env.MONGODB_URI) {
-  throw new Error("Please add your MongoDB URI to .env.local")
-}
 
 if (process.env.NODE_ENV === "development") {
   // In development mode, use a global variable so that the value
@@ -31,8 +31,13 @@ if (process.env.NODE_ENV === "development") {
 export default clientPromise
 
 export async function connectToDatabase() {
-  const client = await clientPromise
-  const db = client.db(process.env.MONGODB_DB)
-  return { client, db }
+  try {
+    const client = await clientPromise
+    const db = client.db(process.env.MONGODB_DB || "cover-letter-generator")
+    return { client, db }
+  } catch (error) {
+    console.error("Failed to connect to MongoDB:", error)
+    throw new Error("Unable to connect to database. Please check your MongoDB URI.")
+  }
 }
 
